@@ -1,9 +1,11 @@
 # nav2_speed_filter
 ## Introduction
 Navigation in ROS2 with Nav2 introduced a lot of new features and possibilities. The goal of this rospackage is to explore and test the new feature of navigating in a known environment where certain portions of the map have fixed speed limits requirements that the robot should meet.
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/65722399/175064847-87e9ac62-ef55-423f-9be3-e37f5c605d0c.gif" width="350" title="speed_filter">
 </p>
+
 ## Usage
 Install the Nav2 packages using your operating system’s package manager:
 ```bashscript

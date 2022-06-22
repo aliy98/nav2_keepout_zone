@@ -36,20 +36,20 @@ cd ~/colcon_ws/src
 git clone https://github.com/aliy98/nav2_speed_filter
 ```
 ```bashscript
-cd ~/tutorials_ws
+cd ~/colcon_ws
 ```
 ```bashscript
 colcon build --symlink-install --packages-select
 ```
 ```bashscript
-source ~/tutorials_ws/install/setup.bash
+source ~/colcon_ws/install/setup.bash
 ```
 ```bashscript
 ros2 launch nav2_costmap_filters_demo costmap_filter_info.launch.py params_file:=src/nav2_speed_filter/params/speed_params.yaml mask:=src/nav2_speed_filter/maps/speed_mask.yaml
 ```
 After Costmap Filter Info Publisher Server and Map Server were launched and Speed Filter was enabled for global/local costmap, to run Nav2 stack, open another termianl and enter the following commands:
 ```bashscript
-source ~/tutorials_ws/install/setup.bash
+source ~/colcon_ws/install/setup.bash
 ```
 ```bashscript
 ros2 launch nav2_bringup tb3_simulation_launch.py

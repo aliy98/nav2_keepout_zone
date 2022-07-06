@@ -68,7 +68,7 @@ git clone https://github.com/aliy98/nav2_speed_filter
 cd ~/colcon_ws
 ```
 ```bashscript
-colcon build --symlink-install --packages-select
+colcon build --symlink-install 
 ```
 ```bashscript
 source ~/colcon_ws/install/setup.bash

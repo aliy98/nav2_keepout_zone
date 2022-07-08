@@ -23,8 +23,9 @@ It has tools to:
 - Plugins to enable your own custom algorithms and behaviors (Nav2 Core)
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/65722399/176279400-3412daac-7d11-42ac-8e68-7ff7c0942104.png" width="500" title="nav2_architecture">
+<img src="https://user-images.githubusercontent.com/65722399/177972250-1b2ba7a0-b3dc-4cd7-af40-dc42b107e93e.png" width="750" title="nav2_architecture">
 </p>
+
 
 ## Speed Filter
 There are a number of plugin interfaces for users to create their own custom applications or algorithms with. Namely, the costmap layer, planner, controller, behavior tree, and behavior plugins. This package focuses on costmap filters plugin and in particular, speed filter, which limits maximum velocity of robot in speed restriction areas.
@@ -32,7 +33,7 @@ Each costmap filter reads incoming meta-information (such as filter type or data
 In order to enable Speed Filter in your configuration, both servers should be enabled as lifecycle nodes in Python launch-file
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/65722399/176288102-cd30080f-086f-40b2-92fa-8f6e5058a6fb.png" width="500" title="design">
+<img src="https://user-images.githubusercontent.com/65722399/176288102-cd30080f-086f-40b2-92fa-8f6e5058a6fb.png" width="750" title="design">
 </p>
 
 ## Usage

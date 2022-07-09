@@ -9,7 +9,7 @@ UML Component diagram for Nav2 software architecture can be represented as follo
 <img src="https://user-images.githubusercontent.com/65722399/178117445-aef32d12-337e-4854-b90c-4c34d2455a71.png" width="750" title="nav2_architecture">
 </p>
 
-Key: (a) Action - (svc) servic - (/) topic
+Key: (a) Action - (svc) service - (/) topic
 
 ### PC (ROS2)
 Software architecture components of ROS2 framework can be divided into Nav2 Nodes and Plugins:

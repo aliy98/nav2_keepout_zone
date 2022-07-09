@@ -3,7 +3,7 @@
 Navigation in ROS2 with [Nav2](https://navigation.ros.org/) introduced a lot of new features and possibilities. The goal of this rospackage is to explore and test the new feature of navigating in a known environment where certain portions of the map have fixed speed limits requirements that the robot should meet.
 
 ## Software Architucture
-UML Component diagram for Nav2 software architecture can be represented as follows:
+UML component diagram for Nav2 software architecture can be represented as follows:
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/65722399/178117445-aef32d12-337e-4854-b90c-4c34d2455a71.png" width="750" title="nav2_architecture">

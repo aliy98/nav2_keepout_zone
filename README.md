@@ -1,13 +1,14 @@
 # nav2_keepout_zone
 ## Introduction
-Navigation in ROS2 with [Nav2](https://navigation.ros.org/) introduced a lot of new features and possibilities. The goal of this rospackage is to explore and test the new feature of navigating in a known environment where certain portions of the map have fixed speed limits requirements that the robot should meet.
+Navigation in ROS2 with [Nav2](https://navigation.ros.org/) introduced a lot of new features and possibilities. The goal of this assignment is to explore and test the new feature of navigating in a known environment while avoiding user-defined “keep out areas”. 
 
 ## Software Architucture
 UML component diagram for Nav2 software architecture can be represented as follows:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/65722399/178117445-aef32d12-337e-4854-b90c-4c34d2455a71.png" width="750" title="nav2_architecture">
+<img src="https://user-images.githubusercontent.com/65722399/178339518-c630e20f-d660-44b4-8534-f81b65ae7e18.png" width="750" title="nav2_architecture">
 </p>
+
 
 Key: (a) Action - (svc) service - (/) topic
 
@@ -76,7 +77,7 @@ Convert sensor data into a costmap representation of the world: The Costmap 2D p
 Invokes the Spin ROS 2 action server, which is implemented by the nav2_behaviors module. It performs an in-place rotation by a given angle. This action is used in nav2 Behavior Trees as a recovery behavior.
 
 #### Costmap Filters
-It is used in order to have a specific action occur based on the location in the annotated map. This annotated map is called “filter mask”. Just like a mask overlaid on a surface, it can or cannot be same size, pose and scale as a main map. The main goal of filter mask is to provide an ability of marking areas on maps with some additional features or behavioral changes. In this case some areas of map have speed restrictions.
+It is used in order to have a specific action occur based on the location in the annotated map. This annotated map is called “filter mask”. Just like a mask overlaid on a surface, it can or cannot be same size, pose and scale as a main map. The main goal of filter mask is to provide an ability of marking areas on maps with some additional features or behavioral changes. In this case robot is not allowed to path through some areas in the map.
 
 
 ### Simulation Environment (Gazebo)
@@ -156,4 +157,4 @@ This will bring up simulation environent in Gazebo and also Rviz. Initially, the
   <img src="https://user-images.githubusercontent.com/65722399/178327880-8ded7e6f-fe41-4053-ac80-51c196ef59f2.gif" width="350" title="speed_filter">
 </p>
 
-The above GIF represents the result of simulation in Rviz, and shows that the robot speed decreases in the restricted areas.
+The above GIF represents the result of simulation in Rviz, and shows that the robot does not move through the keepout areas.

@@ -107,7 +107,6 @@ controller_server:
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
-    speed_limit_topic: "/speed_limit"
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
     controller_plugins: ["FollowPath"]
@@ -188,7 +187,7 @@ local_costmap:
       height: 3
       resolution: 0.05
       robot_radius: 0.22
-      plugins: ["voxel_layer", "inflation_layer"]
+      plugins: ["voxel_layer", "inflation_layer", "keepout_filter"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
@@ -215,6 +214,10 @@ local_costmap:
           obstacle_min_range: 0.0
       static_layer:
         map_subscribe_transient_local: True
+      keepout_filter:
+        plugin: "nav2_costmap_2d::KeepoutFilter"
+        enabled: True
+        filter_info_topic: "/costmap_filter_info"
       always_send_full_costmap: True
   local_costmap_client:
     ros__parameters:
@@ -234,7 +237,7 @@ global_costmap:
       robot_radius: 0.22
       resolution: 0.05
       track_unknown_space: true
-      plugins: ["static_layer", "obstacle_layer", "inflation_layer", "speed_filter"]
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer", "keepout_filter"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -256,11 +259,11 @@ global_costmap:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
         inflation_radius: 0.55
-      speed_filter:
-        plugin: "nav2_costmap_2d::SpeedFilter"
+      keepout_filter:
+        plugin: "nav2_costmap_2d::KeepoutFilter"
         enabled: True
         filter_info_topic: "/costmap_filter_info"
-        speed_limit_topic: "/speed_limit"
+        
       always_send_full_costmap: True
   global_costmap_client:
     ros__parameters:

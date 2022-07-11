@@ -1,4 +1,4 @@
-# nav2_speed_filter
+# nav2_keepout_zone
 ## Introduction
 Navigation in ROS2 with [Nav2](https://navigation.ros.org/) introduced a lot of new features and possibilities. The goal of this rospackage is to explore and test the new feature of navigating in a known environment where certain portions of the map have fixed speed limits requirements that the robot should meet.
 
@@ -153,7 +153,7 @@ ros2 launch nav2_bringup tb3_simulation_launch.py
 This will bring up simulation environent in Gazebo and also Rviz. Initially, the robot has no idea where it is located on the map, therefore we have to set the pose by using the 2D Pose Estimate button in rviz. Finally, in order to set a goal point use Nav2 goal option. 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65722399/175064847-87e9ac62-ef55-423f-9be3-e37f5c605d0c.gif" width="350" title="speed_filter">
+  <img src="https://user-images.githubusercontent.com/65722399/178327880-8ded7e6f-fe41-4053-ac80-51c196ef59f2.gif" width="350" title="speed_filter">
 </p>
 
 The above GIF represents the result of simulation in Rviz, and shows that the robot speed decreases in the restricted areas.

@@ -126,7 +126,7 @@ mkdir -p ~/colcon_ws/src
 cd ~/colcon_ws/src
 ```
 ```bashscript
-git clone https://github.com/aliy98/nav2_speed_filter
+git clone https://github.com/aliy98/nav2_keepout_zone
 ```
 ```bashscript
 cd ~/colcon_ws
